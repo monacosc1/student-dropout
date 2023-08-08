@@ -1,4 +1,4 @@
-# retail-trade-prediction
+# student-dropout-prediction
 
 This repository shows the steps taken to perform a time series analysis of the "[St. Louis Fed Retail Trade](https://fred.stlouisfed.org/series/SMU53426604200000001)" data published on the Fed's website.  
 
