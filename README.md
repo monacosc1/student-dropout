@@ -1,13 +1,13 @@
 # student-dropout-prediction
 
-This repository shows the steps taken to perform a time series analysis of the "[St. Louis Fed Retail Trade](https://fred.stlouisfed.org/series/SMU53426604200000001)" data published on the Fed's website.  
+This repository shows the steps taken to perform a classification analysis of the "[Student Outcomes in Higher Education](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)" data published on the the UC Irvine Machine Learning Repository.  
 
 The data and Jupyter Notebook have been added to the repo so that anyone can recreate the steps involved and add their own insights. 
 
 ## Use of:
 * **Jupyter Notebook** 2023.03.0-daily+82.pro2
     * **Main Packages used:** pandas, numpy, statsmodels,
-    matplotlib
+    matplotlib, catboost, imlearn
 
 # Overview
 ## Key Findings
@@ -22,11 +22,12 @@ The data and Jupyter Notebook have been added to the repo so that anyone can rec
 ![alt text](https://github.com/monacosc1/retail-trade-prediction/blob/main/images/dallas_prediction.png) 
 
 ## Model Coefficients
-* The SARIMA order is (11, 2, 0)(0, 0, 1, 12). Based on this order, we examine the coefficients of our model. Upon analyzing the p-values, we observe that all of them are less than 0.01. This indicates that all the components of the model hold significant importance in predicting the time series.
+* The final classification model had a validation accuracy of 89%.
 ![alt text](https://github.com/monacosc1/retail-trade-prediction/blob/main/images/seattle_model_summary.png) 
 
 # Next Steps
-* To enhance the predictive power of the algorithm, we can incorporate exogenous variables.
-* Given the clear presence of seasonality in the data, an alternative approach to ARIMA and its variations is to employ a time series forecasting algorithm such as Fbprophet. Fbprophet is well-suited for handling seasonality and can potentially improve the accuracy of the predictions.
-* Analyze the error plot derived from the predicted values. This allows us to examine whether the errors exhibit a random pattern or if there are any discernible patterns indicating that the model failed to capture certain aspects of the data.
+* Feature selection methods like backward elimination can be used to choose the most relevant features.
+* To handle class imbalance, more sophisticated techniques such as resampling methods (e.g., SMOTE) or ensemble methods (e.g., Random Forest, Gradient Boosting) can be employed.
+* Instead of using the Min-Max scaler, considering Mean-Variance scaling (StandardScaler) might be a better choice
+* Ensemble methods, like a stacked approach to classification (Stacking), can be utilized to combine multiple classifiers, potentially leading to improved predictive performance by leveraging the strengths of each model in the ensemble.
 
