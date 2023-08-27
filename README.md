@@ -11,19 +11,23 @@ The data and Jupyter Notebook have been added to the repo so that anyone can rec
 
 # Overview
 ## Key Findings
-* Using a SARIMA model, we make predictions for retail trade for the time period from 2022-02-01 to 2023-05-01. To evaluate the accuracy of the predictions, we  utilize the mean absolute percentage error (MAPE). 
+* Given an imbalanced dataset, we used a SMOTE method to balance both classes of "dropout" and "graduate".
 
-### Seattle Tacoma Bellevue
-* The MAPE value on the test set is calculated to be 2.6%. This indicates that, on average, the predicted  values deviate from the actual values by 2.6%. 
-![alt text](https://github.com/monacosc1/retail-trade-prediction/blob/main/images/seattle_prediction.png) 
+### Marital Status by Target
+* Legally Separated students are likely to drop out. By contrast, widowers are likely to graduate.
+![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/marital_status_by_target.png) 
 
-### Dallas Fort Worth Arlington
-* Using the same methodology, the MAPE for Dallas-Fort Worth-Arlington is 1.82%.
-![alt text](https://github.com/monacosc1/retail-trade-prediction/blob/main/images/dallas_prediction.png) 
+### Mother's Occupation
+* Students whose mothers are teachers, personal service, or professional service workers are likely to graduate.
+![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/mothers_occupation_by_target.png) 
+
+### Area of Study
+* Nursing and Social Science students are likely to graduate.
+![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/course_by_target.png) 
 
 ## Model Coefficients
 * The final classification model had a validation accuracy of 89%.
-![alt text](https://github.com/monacosc1/retail-trade-prediction/blob/main/images/seattle_model_summary.png) 
+![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/accuracy_report.png) 
 
 # Next Steps
 * Feature selection methods like backward elimination can be used to choose the most relevant features.
